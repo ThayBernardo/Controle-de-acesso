@@ -2,13 +2,14 @@ package com.trybe.acc.java.controledeacesso;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Principal {
   public static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
 
-    ArrayList<String> list = new ArrayList<String>();
+    ArrayList<Integer> list = new ArrayList<Integer>();
 
     short acessoEscolhido;
 
@@ -28,13 +29,42 @@ public class Principal {
 
         if (idadeDaPessoa < 18) {
           System.out.println("Pessoa cliente menor de idade, catraca liberada!");
+          list.add(1);
         } else if (idadeDaPessoa >= 18 && idadeDaPessoa <= 49) {
           System.out.println("Pessoa adulta, catraca liberada!");
+          list.add(2);
         } else {
           System.out.println("Pessoa adulta a partir de 50, catraca liberada!");
+          list.add(3);
         }
       } else {
-        System.out.println("Finalizado");
+        short crianca = 0;
+        short adulto = 0;
+        short idoso = 0;
+        
+        for(short i = 0; i < list.size(); i++) {
+          if(list.get(i) == 1) {
+            crianca += 1;
+          } else if(list.get(i) == 2) {
+            adulto += 1;
+          } else {
+            idoso += 1;
+          }
+        }
+        
+        float total = crianca + adulto + idoso;
+        
+        DecimalFormat df = new DecimalFormat("0.00");
+        
+        System.out.println("----- Quantidade -----");
+        System.out.println("menores: " + crianca);
+        System.out.println("adultas: " + adulto);
+        System.out.println("a partir de 50: " + idoso);
+        System.out.println("----- Percentual -----");
+        System.out.println("menores: " + df.format(crianca*100 / total).toString() + "%");
+        System.out.println("menores: " + df.format(adulto*100 / total).toString() + "%");
+        System.out.println("menores: " + df.format(idoso*100 / total).toString() + "%");
+        System.out.println("TOTAL: " + (crianca + adulto + idoso));
       }
     } while (acessoEscolhido != 2);
     scanner.close();
