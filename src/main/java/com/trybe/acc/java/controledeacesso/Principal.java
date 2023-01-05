@@ -19,7 +19,7 @@ public class Principal {
       acessoEscolhido = scanMenu();
       
       if(acessoEscolhido != 1 && acessoEscolhido != 2) {
-        System.out.println("Entre com uma opção válida");
+        System.out.println("Entre com uma opção válida!");
         continue;
       }
 
@@ -63,11 +63,11 @@ public class Principal {
         System.out.println("menores: " + crianca);
         System.out.println("adultas: " + adulto);
         System.out.println("a partir de 50: " + idoso);
-        System.out.println("----- Percentual -----");
+        System.out.println("\n----- Percentual -----");
         System.out.println("menores: " + df.format(crianca*100 / total).toString() + "%");
-        System.out.println("menores: " + df.format(adulto*100 / total).toString() + "%");
-        System.out.println("menores: " + df.format(idoso*100 / total).toString() + "%");
-        System.out.println("TOTAL: " + (crianca + adulto + idoso));
+        System.out.println("adultas: " + df.format(adulto*100 / total).toString() + "%");
+        System.out.println("a partir de 50: " + df.format(idoso*100 / total).toString() + "%");
+        System.out.println("\nTOTAL: " + (crianca + adulto + idoso));
       }
     } while (acessoEscolhido != 2);
     scanner.close();
