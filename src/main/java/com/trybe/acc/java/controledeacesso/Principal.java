@@ -17,8 +17,8 @@ public class Principal {
 
     do {
       acessoEscolhido = scanMenu();
-      
-      if(acessoEscolhido != 1 && acessoEscolhido != 2) {
+
+      if (acessoEscolhido != 1 && acessoEscolhido != 2) {
         System.out.println("Entre com uma opção válida!");
         continue;
       }
@@ -43,30 +43,30 @@ public class Principal {
         short crianca = 0;
         short adulto = 0;
         short idoso = 0;
-        
-        for(short i = 0; i < list.size(); i++) {
-          if(list.get(i) == 1) {
+
+        for (short i = 0; i < list.size(); i++) {
+          if (list.get(i) == 1) {
             crianca += 1;
-          } else if(list.get(i) == 2) {
+          } else if (list.get(i) == 2) {
             adulto += 1;
           } else {
             idoso += 1;
           }
         }
-        
+
         float total = crianca + adulto + idoso;
-        
+
         NumberFormat df = NumberFormat.getCurrencyInstance(Locale.US);
-        ((DecimalFormat)df).applyPattern("0.0#");
-        
+        ((DecimalFormat) df).applyPattern("0.0#");
+
         System.out.println("----- Quantidade -----");
         System.out.println("menores: " + crianca);
         System.out.println("adultas: " + adulto);
         System.out.println("a partir de 50: " + idoso);
         System.out.println("\n----- Percentual -----");
-        System.out.println("menores: " + df.format(crianca*100 / total).toString() + "%");
-        System.out.println("adultas: " + df.format(adulto*100 / total).toString() + "%");
-        System.out.println("a partir de 50: " + df.format(idoso*100 / total).toString() + "%");
+        System.out.println("menores: " + df.format(crianca * 100 / total).toString() + "%");
+        System.out.println("adultas: " + df.format(adulto * 100 / total).toString() + "%");
+        System.out.println("a partir de 50: " + df.format(idoso * 100 / total).toString() + "%");
         System.out.println("\nTOTAL: " + (crianca + adulto + idoso));
       }
     } while (acessoEscolhido != 2);
