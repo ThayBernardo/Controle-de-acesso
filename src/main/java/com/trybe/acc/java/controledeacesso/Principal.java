@@ -1,6 +1,8 @@
 package com.trybe.acc.java.controledeacesso;
 
 import java.util.ArrayList;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
@@ -54,7 +56,8 @@ public class Principal {
         
         float total = crianca + adulto + idoso;
         
-        DecimalFormat df = new DecimalFormat("0.00");
+        NumberFormat df = NumberFormat.getCurrencyInstance(Locale.US);
+        ((DecimalFormat)df).applyPattern("0.0#");
         
         System.out.println("----- Quantidade -----");
         System.out.println("menores: " + crianca);
