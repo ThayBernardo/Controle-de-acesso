@@ -1,10 +1,10 @@
 package com.trybe.acc.java.controledeacesso;
 
-import java.util.ArrayList;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class Principal {
   public static Scanner scanner = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class Principal {
           }
         }
 
-        float total = crianca + adulto + idoso;
+   float total = crianca + adulto + idoso;
 
         NumberFormat df = NumberFormat.getCurrencyInstance(Locale.US);
         ((DecimalFormat) df).applyPattern("0.0#");
