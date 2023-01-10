@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class Principal {
 
+  /** 
+   * method main
+   */
   public static void main(String[] args) {
 
     ArrayList<Integer> list = new ArrayList<Integer>();
@@ -55,8 +58,6 @@ public class Principal {
           }
         }
 
-        float total = crianca + adulto + idoso;
-
         NumberFormat df = NumberFormat.getCurrencyInstance(Locale.US);
         ((DecimalFormat) df).applyPattern("0.0#");
 
@@ -65,6 +66,7 @@ public class Principal {
         System.out.println("adultas: " + adulto);
         System.out.println("a partir de 50: " + idoso);
         System.out.println("\n----- Percentual -----");
+        float total = crianca + adulto + idoso;
         System.out.println("menores: " + df.format(crianca * 100 / total).toString() + "%");
         System.out.println("adultas: " + df.format(adulto * 100 / total).toString() + "%");
         System.out.println("a partir de 50: " + df.format(idoso * 100 / total).toString() + "%");
@@ -74,12 +76,18 @@ public class Principal {
     scanner.close();
   }
 
+  /** 
+   * method showMenu
+   */
   public static void showMenu() {
     System.out.println("Entre com o número correspondente à opção desejada:");
     System.out.println("1 - Acessar o estabelecimento");
     System.out.println("2 - Finalizar sistema e mostrar relatório");
   }
-
+  
+  /** 
+   * method scanMenu
+   */
   public static short scanMenu(Scanner scanner) {
     showMenu();
 
