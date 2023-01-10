@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Principal {
 
   /** 
-   * method main
+   * method main.
    */
   public static void main(String[] args) {
 
@@ -77,7 +77,7 @@ public class Principal {
   }
 
   /** 
-   * method showMenu
+   * method showMenu.
    */
   public static void showMenu() {
     System.out.println("Entre com o número correspondente à opção desejada:");
@@ -86,7 +86,7 @@ public class Principal {
   }
   
   /** 
-   * method scanMenu
+   * method scanMenu.
    */
   public static short scanMenu(Scanner scanner) {
     showMenu();
