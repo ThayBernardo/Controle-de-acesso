@@ -7,16 +7,17 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Principal {
-  public static Scanner scanner = new Scanner(System.in);
-
+  
   public static void main(String[] args) {
 
     ArrayList<Integer> list = new ArrayList<Integer>();
 
+    Scanner scanner = new Scanner(System.in);
+    
     short acessoEscolhido;
 
     do {
-      acessoEscolhido = scanMenu();
+      acessoEscolhido = scanMenu(scanner);
 
       if (acessoEscolhido != 1 && acessoEscolhido != 2) {
         System.out.println("Entre com uma opção válida!");
@@ -55,7 +56,7 @@ public class Principal {
         }
 
    float total = crianca + adulto + idoso;
-
+   
         NumberFormat df = NumberFormat.getCurrencyInstance(Locale.US);
         ((DecimalFormat) df).applyPattern("0.0#");
 
@@ -79,7 +80,7 @@ public class Principal {
     System.out.println("2 - Finalizar sistema e mostrar relatório");
   }
 
-  public static short scanMenu() {
+  public static short scanMenu(Scanner scanner) {
     showMenu();
 
     String acesso = scanner.next();
