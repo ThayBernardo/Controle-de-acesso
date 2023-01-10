@@ -7,13 +7,13 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Principal {
-  
+
   public static void main(String[] args) {
 
     ArrayList<Integer> list = new ArrayList<Integer>();
 
     Scanner scanner = new Scanner(System.in);
-    
+
     short acessoEscolhido;
 
     do {
@@ -55,8 +55,8 @@ public class Principal {
           }
         }
 
-   float total = crianca + adulto + idoso;
-   
+        float total = crianca + adulto + idoso;
+
         NumberFormat df = NumberFormat.getCurrencyInstance(Locale.US);
         ((DecimalFormat) df).applyPattern("0.0#");
 
