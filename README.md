@@ -8,6 +8,8 @@ Desenvolvimento de um sistema de controle de acesso inteligente para um estabele
 
 # O que foi desenvolvido
 
+<img src="img/controle-acesso.png" width="650px"/>
+
 A aplicação gera um relatorio onde classifica as pessoas em três categorias:
 
 Pessoas menores de 18 anos,<br>
