@@ -10,9 +10,9 @@ Desenvolvimento de um sistema de controle de acesso inteligente para um estabele
 
 A aplicação gera um relatorio onde classifica as pessoas em tres categorias:
 
-Pessoas menores de 18 anos,
-Pessoas adultas (entre 18 e 49 anos), e
-Pessoas a partir de 50 anos.
+Pessoas menores de 18 anos,<br>
+Pessoas adultas (entre 18 e 49 anos), e <br>
+Pessoas a partir de 50 anos.<br>
 
 Esse sistema irá apresentar um menu no console, indicando a opção de acessar o estabelecimento e a opção de finalizar o sistema e mostrar um relatório,
 o fluxo do sistema é feito em duas etapas:
